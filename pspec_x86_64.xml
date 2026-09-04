@@ -1,0 +1,68 @@
+<PISI>
+    <Source>
+        <Name>river</Name>
+        <Homepage>https://codeberg.org/river/river</Homepage>
+        <Packager>
+            <Name>DinimixisDEMZ</Name>
+            <Email>dinimixis@vivaldi.net</Email>
+        </Packager>
+        <License>GPL-3.0-only</License>
+        <PartOf>desktop.wayland</PartOf>
+        <Summary xml:lang="en">A non-monolithic Wayland compositor</Summary>
+        <Description xml:lang="en">River is a non-monolithic Wayland compositor. Unlike other Wayland
+compositors, river does not combine the compositor and window manager
+into one program. Instead, users can choose any window manager
+implementing the river-window-management-v1 protocol.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>river</Name>
+        <Summary xml:lang="en">A non-monolithic Wayland compositor</Summary>
+        <Description xml:lang="en">River is a non-monolithic Wayland compositor. Unlike other Wayland
+compositors, river does not combine the compositor and window manager
+into one program. Instead, users can choose any window manager
+implementing the river-window-management-v1 protocol.
+</Description>
+        <PartOf>desktop.wayland</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/river</Path>
+            <Path fileType="data">/usr/share/licenses/river/0BSD.txt</Path>
+            <Path fileType="data">/usr/share/licenses/river/CC-BY-SA-4.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/river/GPL-3.0-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/river/MIT.txt</Path>
+            <Path fileType="man">/usr/share/man/man1/river.1.zst</Path>
+            <Path fileType="data">/usr/share/river-protocols/stable/river-input-management-v1.xml</Path>
+            <Path fileType="data">/usr/share/river-protocols/stable/river-layer-shell-v1.xml</Path>
+            <Path fileType="data">/usr/share/river-protocols/stable/river-libinput-config-v1.xml</Path>
+            <Path fileType="data">/usr/share/river-protocols/stable/river-window-management-v1.xml</Path>
+            <Path fileType="data">/usr/share/river-protocols/stable/river-xkb-bindings-v1.xml</Path>
+            <Path fileType="data">/usr/share/river-protocols/stable/river-xkb-config-v1.xml</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>river-devel</Name>
+        <Summary xml:lang="en">Development files for river</Summary>
+        <Description xml:lang="en">River is a non-monolithic Wayland compositor. Unlike other Wayland
+compositors, river does not combine the compositor and window manager
+into one program. Instead, users can choose any window manager
+implementing the river-window-management-v1 protocol.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="1">river</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share/pkgconfig/river-protocols.pc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2026-09-04</Date>
+            <Version>0.5.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>DinimixisDEMZ</Name>
+            <Email>dinimixis@vivaldi.net</Email>
+        </Update>
+    </History>
+</PISI>

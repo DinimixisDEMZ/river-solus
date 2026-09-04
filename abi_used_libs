@@ -1,0 +1,8 @@
+ld-linux-x86-64.so.2
+libc.so.6
+libevdev.so.2
+libinput.so.10
+libpixman-1.so.0
+libwayland-server.so.0
+libwlroots-0.20.so
+libxkbcommon.so.0

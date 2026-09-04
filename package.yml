@@ -1,0 +1,31 @@
+name: river
+version: 0.5.0
+release: 1
+source:
+    - https://codeberg.org/river/river/archive/ce0922c1848bf341db325609be5809e08e6e82b8.tar.gz : 7ecfe719c40fae07f91828c5109f4692203c2a42f3ec14685e32ecd2f4155ecd
+homepage: https://codeberg.org/river/river
+license: GPL-3.0-only
+component: desktop.wayland
+summary: A non-monolithic Wayland compositor
+description: |
+    River is a non-monolithic Wayland compositor. Unlike other Wayland
+    compositors, river does not combine the compositor and window manager
+    into one program. Instead, users can choose any window manager
+    implementing the river-window-management-v1 protocol.
+networking: true
+builddeps:
+    - pkgconfig(libevdev)
+    - pkgconfig(libinput)
+    - pkgconfig(pixman-1)
+    - pkgconfig(wayland-server)
+    - pkgconfig(wlroots-0.20)
+    - pkgconfig(xkbcommon)
+    - scdoc
+    - zig
+build: |
+    zig build -Doptimize=ReleaseSafe
+install: |
+    zig build -Doptimize=ReleaseSafe --prefix $installdir/usr
+    %install_license LICENSES/*
+check: |
+    zig build test
